@@ -18,7 +18,7 @@ env:
 jobs:
   plotjuggler:
     name: plotjuggler
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
     - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
 
   simulator:
     name: simulator
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 50
     env:
       IMAGE_NAME: openpilot-sim
