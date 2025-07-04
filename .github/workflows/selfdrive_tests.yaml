@@ -85,7 +85,7 @@ jobs:
   #      echo 'EOF' >> $GITHUB_ENV
   #  - name: Cache dependencies
   #    id: dependency-cache
-  #    uses: actions/cache@v2
+  #    uses: actions/cache@v4
   #    with:
   #      path: |
   #        ~/.pyenv
@@ -189,7 +189,7 @@ jobs:
         submodules: true
     - name: Cache dependencies
       id: dependency-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: /tmp/comma_download_cache
         key: ${{ hashFiles('.github/workflows/selfdrive_tests.yaml', 'selfdrive/test/test_valgrind_replay.py') }}
@@ -279,7 +279,7 @@ jobs:
         submodules: true
     - name: Cache dependencies
       id: dependency-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: /tmp/comma_download_cache
         key: ${{ hashFiles('.github/workflows/selfdrive_tests.yaml', 'selfdrive/test/process_replay/test_processes.py') }}
@@ -381,7 +381,7 @@ jobs:
         submodules: true
     - name: Cache dependencies
       id: dependency-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: /tmp/comma_download_cache
         key: car_models-${{ hashFiles('selfdrive/test/test_models.py', 'selfdrive/test/test_routes.py') }}-${{ matrix.job }}
